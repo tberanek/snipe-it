@@ -95,7 +95,7 @@ class SuppliersController extends Controller
      */
     public function edit($supplierId = null)
     {
-        $this->authorize('edit', Supplier::class);
+        $this->authorize('update', Supplier::class);
         // Check if the supplier exists
         if (is_null($item = Supplier::find($supplierId))) {
             // Redirect to the supplier  page
@@ -115,7 +115,7 @@ class SuppliersController extends Controller
      */
     public function update($supplierId = null, ImageUploadRequest $request)
     {
-        $this->authorize('edit', Supplier::class);
+        $this->authorize('update', Supplier::class);
         // Check if the supplier exists
         if (is_null($supplier = Supplier::find($supplierId))) {
             // Redirect to the supplier  page

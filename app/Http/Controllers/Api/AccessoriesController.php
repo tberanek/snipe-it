@@ -167,7 +167,7 @@ class AccessoriesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $this->authorize('edit', Accessory::class);
+        $this->authorize('update', Accessory::class);
         $accessory = Accessory::findOrFail($id);
         $accessory->fill($request->all());
 

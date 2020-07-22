@@ -551,7 +551,7 @@ class LicensesController extends Controller
 
         // the license is valid
         if ($license) {
-            $this->authorize('edit', $license);
+            $this->authorize('update', $license);
             $log = Actionlog::find($fileId);
             if ($log) {
                 $full_filename = $destinationPath.'/'.$log->filename;
